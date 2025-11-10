@@ -1,0 +1,117 @@
+/* Full-page animated gradient background */
+body {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  background-size: 400% 400%;
+  animation: glitter 8s ease infinite;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Animation for glitter effect */
+@keyframes glitter {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Main board container */
+.kanban-board {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  transition: transform 0.3s ease;
+}
+
+.kanban-board:hover {
+  transform: translateY(-5px);
+}
+
+/* Title */
+.kanban-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Input and button area */
+.add-task-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-task-container input,
+.add-task-container select {
+  padding: 8px 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.add-task-container button {
+  background-color: #f57c00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-task-container button:hover {
+  background-color: #e65100;
+}
+
+/* Columns layout */
+.kanban-columns {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Each column */
+.kanban-column {
+  background-color: #fff3e0;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 250px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kanban-column h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #e65100;
+}
+
+/* Task cards */
+.task {
+  background-color: #ffe0b2;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.task:hover {
+  transform: scale(1.05);
+}

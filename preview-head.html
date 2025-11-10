@@ -1,0 +1,21 @@
+<style>
+  html, body, #storybook-root, #storybook-preview-iframe {
+    height: 100%;
+    margin: 0;
+  }
+
+  /* glitter background */
+  html, body, #storybook-root {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    background-size: 400% 400%;
+    animation: glitter 8s ease infinite;
+    min-height: 100vh;
+    font-family: sans-serif;
+  }
+
+  @keyframes glitter {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+</style>
